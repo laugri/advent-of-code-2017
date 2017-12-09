@@ -8,4 +8,12 @@ describe('solveCaptcha', () => {
       expect(solveCaptcha('1122')).toBe(3);
     },
   );
+
+
+  test(
+    '1111 produces 4 because each digit (all 1) matches the next.',
+    () => {
+      expect(solveCaptcha('1111')).toBe(4);
+    },
+  );
 });
