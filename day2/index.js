@@ -1,5 +1,5 @@
 export const diffBetweenLargestSmallestValue = row => {
-  const splittedRow = row.split(' ');
+  const splittedRow = row.split(/\s+/);
   const max = Math.max(...splittedRow);
   const min = Math.min(...splittedRow);
   return max - min;
