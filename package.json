@@ -24,7 +24,8 @@
   "scripts": {
     "precommit": "lint-staged",
     "test": "jest",
-    "day1": "babel-node day1/cli.js"
+    "day1": "babel-node day1/cli.js",
+    "day2": "babel-node day2/cli.js"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
