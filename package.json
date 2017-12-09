@@ -23,7 +23,8 @@
   },
   "scripts": {
     "precommit": "lint-staged",
-    "test": "jest"
+    "test": "jest",
+    "day1": "babel-node day1/cli.js"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -40,6 +41,7 @@
     "prettier": "^1.9.1"
   },
   "dependencies": {
+    "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1"
   }
 }
