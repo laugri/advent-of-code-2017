@@ -12,6 +12,14 @@ describe('solveCaptcha', () => {
   test('1111 produces 4 because each digit (all 1) matches the next.', () => {
     expect(solveCaptcha('1111')).toBe(4);
   });
+
+  test('1234 produces 0 because no digit matches the next.', () => {
+    expect(solveCaptcha('1234')).toBe(0);
+  });
+
+  test('91212129 produces 9 because the only digit that matches the next one is the last digit, 9.', () => {
+    expect(solveCaptcha('91212129')).toBe(9);
+  });
 });
 
 describe('getNextChar', () => {
