@@ -1,4 +1,4 @@
-const getNextChar = (string, index) => {
+export const getNextChar = (string, index) => {
   if (index < string.length - 1) {
     return string[index + 1];
   }

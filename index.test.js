@@ -1,4 +1,4 @@
-import solveCaptcha from './index';
+import solveCaptcha, { getNextChar } from './index';
 
 describe('solveCaptcha', () => {
   test(
@@ -9,11 +9,25 @@ describe('solveCaptcha', () => {
     },
   );
 
+  test('1111 produces 4 because each digit (all 1) matches the next.', () => {
+    expect(solveCaptcha('1111')).toBe(4);
+  });
+});
 
-  test(
-    '1111 produces 4 because each digit (all 1) matches the next.',
-    () => {
-      expect(solveCaptcha('1111')).toBe(4);
-    },
-  );
+describe('getNextChar', () => {
+  test('should return first character if index is at the end', () => {
+    expect(getNextChar('123', 2)).toBe('1');
+  });
+
+  test('should return character at index if index is not at the end', () => {
+    expect(getNextChar('123', 1)).toBe('3');
+  });
+
+  test('should return character if string is a unique character', () => {
+    expect(getNextChar('1', 0)).toBe('1');
+  });
+
+  test('should return undefined if empty string', () => {
+    expect(getNextChar('', 0)).toBe(undefined);
+  });
 });
