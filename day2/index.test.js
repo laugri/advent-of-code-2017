@@ -20,4 +20,8 @@ describe('diffBetweenLargestSmallestValue', () => {
   test('The third row\'s difference is 6.', () => {
     expect(diffBetweenLargestSmallestValue('2 4 6 8')).toBe(6);
   });
+
+  test('Also works with tabs.', () => {
+    expect(diffBetweenLargestSmallestValue('2\t4')).toBe(2);
+  });
 });
