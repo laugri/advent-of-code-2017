@@ -10,19 +10,19 @@
     "trailingComma": "all",
     "singleQuote": true
   },
+  "lint-staged": {
+    "{*.json,.babelrc}": ["prettier --write", "git add"],
+    "*.js": ["eslint --fix --max-warnings 0", "git add"]
+  },
   "eslintConfig": {
     "env": {
       "jest": true
     },
-    "plugins": [
-      "prettier"
-    ],
-    "extends": [
-      "airbnb-base",
-      "prettier"
-    ]
+    "plugins": ["prettier"],
+    "extends": ["airbnb-base", "prettier"]
   },
   "scripts": {
+    "precommit": "lint-staged",
     "test": "jest"
   },
   "devDependencies": {
@@ -34,7 +34,9 @@
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-prettier": "^2.3.1",
     "eslint-plugin-react": "^7.5.1",
+    "husky": "^0.14.3",
     "jest": "^21.2.1",
+    "lint-staged": "^6.0.0",
     "prettier": "^1.9.1"
   },
   "dependencies": {
