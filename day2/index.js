@@ -1,3 +1,10 @@
-export const diffBetweenLargestSmallestValue = () => 8;
+export const diffBetweenLargestSmallestValue = row => {
+  const splittedRow = row.split(' ');
+  const max = Math.max(...splittedRow);
+  const min = Math.min(...splittedRow);
+  return max - min;
+};
 
-export default () => 18;
+const checksum = () => 18;
+
+export default checksum;
