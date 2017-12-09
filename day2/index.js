@@ -5,6 +5,12 @@ export const diffBetweenLargestSmallestValue = row => {
   return max - min;
 };
 
-const checksum = () => 18;
+const checksum = spreadsheet => {
+  const rows = spreadsheet.split('\n');
+  return rows.reduce(
+    (sum, row) => sum + diffBetweenLargestSmallestValue(row),
+    0,
+  );
+};
 
 export default checksum;
